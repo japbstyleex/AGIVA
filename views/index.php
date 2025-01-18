@@ -7,6 +7,8 @@
     <title>ÁGIVA</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Flatpickr CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     <!-- Favicon -->
@@ -51,6 +53,33 @@
         </div>
     </section>
 
+    <!-- Sección de Formulario de Reservas -->
+    <section class="reservation-form py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Haz tu Reserva</h2>
+            <form>
+                <input type="text" id="entrada" name="entrada" placeholder="Entrada" class="form-control" readonly>
+                <input type="text" id="salida" name="salida" placeholder="Salida" class="form-control" readonly>
+                <div class="occupation-dropdown">
+                    <button type="button" class="form-control">1 hab. 2 adultos</button>
+                    <div class="occupation-dropdown-content">
+                        <div class="room" id="room1">
+                            <label>Habitación 1</label>
+                            <label>Adultos: <input type="number" min="1" value="2"></label>
+                            <label>Niños: <input type="number" min="0" value="0"></label>
+                            <button type="button" class="remove-room-btn">- Eliminar habitación</button>
+                        </div>
+                        <button type="button" class="add-room-btn">+ Añadir habitación</button>
+                    </div>
+                </div>
+                <input type="text" placeholder="Código Promocional" aria-label="Código Promocional" class="form-control">
+                <button type="submit" class="mi-be-button">Reservar</button>
+            </form>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
     <!-- Sección de Slider con Tarjetas -->
     <section class="slider py-5">
         <div class="container">
@@ -59,12 +88,16 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="../assets/img/terraza.jpeg" class="card-img-top" alt="Habitación Deluxe">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Habitación Deluxe</h5>
-                                        <p class="card-text">Confort y elegancia con vistas espectaculares.</p>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="../assets/img/terraza.jpeg" class="img-fluid" alt="Habitación Deluxe">
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Habitación Deluxe</h5>
+                                            <p class="card-text">Confort y elegancia con vistas espectaculares.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -72,12 +105,16 @@
                     </div>
                     <div class="carousel-item">
                         <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="../assets/img/card2.jpg" class="card-img-top" alt="Gastronomía">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Gastronomía</h5>
-                                        <p class="card-text">Sabores auténticos en cada plato.</p>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="../assets/img/card2.jpg" class="img-fluid" alt="Gastronomía">
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Gastronomía</h5>
+                                            <p class="card-text">Sabores auténticos en cada plato.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -85,12 +122,16 @@
                     </div>
                     <div class="carousel-item">
                         <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <img src="../assets/img/card3.jpg" class="card-img-top" alt="Spa y Bienestar">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Spa y Bienestar</h5>
-                                        <p class="card-text">Relajación total en un entorno de lujo.</p>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="../assets/img/card3.jpg" class="img-fluid" alt="Spa y Bienestar">
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Spa y Bienestar</h5>
+                                            <p class="card-text">Relajación total en un entorno de lujo.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -110,6 +151,7 @@
     </section>
 
 
+
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
         <p>&copy; 2025 ÁGIVA. Todos los derechos reservados.</p>
@@ -119,6 +161,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Scripts personalizados -->
     <script src="../assets/js/scripts.js"></script>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializar Flatpickr en los campos de entrada y salida
+            flatpickr("#entrada", {
+                dateFormat: "d-m-Y",
+                minDate: "today",
+            });
+
+            flatpickr("#salida", {
+                dateFormat: "d-m-Y",
+                minDate: "today",
+            });
+
+            // Lógica para añadir y eliminar habitaciones dinámicamente
+            const addRoomButton = document.querySelector('.add-room-btn');
+            const occupationDropdownContent = document.querySelector('.occupation-dropdown-content');
+
+            let roomCount = 1;
+
+            addRoomButton.addEventListener('click', () => {
+                roomCount++;
+                const newRoom = document.createElement('div');
+                newRoom.classList.add('room');
+                newRoom.id = `room${roomCount}`;
+                newRoom.innerHTML = `
+                    <label>Habitación ${roomCount}</label>
+                    <label>Adultos: <input type="number" min="1" value="2"></label>
+                    <label>Niños: <input type="number" min="0" value="0"></label>
+                    <button type="button" class="remove-room-btn">- Eliminar habitación</button>
+                `;
+                occupationDropdownContent.insertBefore(newRoom, addRoomButton);
+
+                // Agregar evento para eliminar habitación
+                newRoom.querySelector('.remove-room-btn').addEventListener('click', () => {
+                    newRoom.remove();
+                });
+            });
+
+            // Evento para eliminar la primera habitación si es necesario
+            const initialRemoveButton = document.querySelector('#room1 .remove-room-btn');
+            if (initialRemoveButton) {
+                initialRemoveButton.addEventListener('click', () => {
+                    document.querySelector('#room1').remove();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

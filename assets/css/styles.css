@@ -1,0 +1,103 @@
+/* Estilos personalizados para el formulario */
+.reservation-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.reservation-form input,
+.reservation-form button,
+.reservation-form .occupation-dropdown {
+  flex: 1;
+  min-width: 150px;
+  margin: 5px 0;
+}
+
+.mi-be-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mi-be-button:hover {
+  background-color: #0056b3;
+}
+
+.occupation-dropdown {
+  position: relative;
+}
+
+.occupation-dropdown button {
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.occupation-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  z-index: 10;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.occupation-dropdown:hover .occupation-dropdown-content {
+  display: block;
+}
+
+.occupation-dropdown-content .room {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.occupation-dropdown-content .room:last-child {
+  border-bottom: none;
+}
+
+.occupation-dropdown-content label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.occupation-dropdown-content input {
+  width: 60px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.add-room-btn,
+.remove-room-btn {
+  margin-top: 10px;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.add-room-btn:hover,
+.remove-room-btn:hover {
+  text-decoration: underline;
+}
+
+.remove-room-btn {
+  color: #dc3545;
+}
