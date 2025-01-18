@@ -53,7 +53,7 @@
     <section class="container my-5">
         <div class="row">
             <div class="col-md-6">
-                <img src="../assets/img/restaurant.jpg" class="img-fluid rounded" alt="Restaurante del hotel">
+                <img src="../assets/img/terrace.jpg" class="img-fluid rounded" alt="Terraza del hotel">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h2 class="mb-3">Una experiencia inolvidable</h2>
