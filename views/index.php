@@ -57,26 +57,37 @@
     <section class="reservation-form py-5">
         <div class="container">
             <h2 class="text-center mb-4">Haz tu Reserva</h2>
-            <form>
+            <form action="procesar_reserva.php" method="POST">
+                <!-- Fecha de Entrada -->
                 <input type="text" id="entrada" name="entrada" placeholder="Entrada" class="form-control" readonly>
+
+                <!-- Fecha de Salida -->
                 <input type="text" id="salida" name="salida" placeholder="Salida" class="form-control" readonly>
+
+                <!-- Dropdown de Ocupación -->
                 <div class="occupation-dropdown">
                     <button type="button" class="form-control">1 hab. 2 adultos</button>
                     <div class="occupation-dropdown-content">
+                        <!-- Habitación 1 -->
                         <div class="room" id="room1">
                             <label>Habitación 1</label>
-                            <label>Adultos: <input type="number" min="1" value="2"></label>
-                            <label>Niños: <input type="number" min="0" value="0"></label>
+                            <label>Adultos: <input type="number" name="adultos[]" min="1" value="2"></label>
+                            <label>Niños: <input type="number" name="ninos[]" min="0" value="0"></label>
                             <button type="button" class="remove-room-btn">- Eliminar habitación</button>
                         </div>
                         <button type="button" class="add-room-btn">+ Añadir habitación</button>
                     </div>
                 </div>
-                <input type="text" placeholder="Código Promocional" aria-label="Código Promocional" class="form-control">
-                <button type="submit" class="mi-be-button">Reservar</button>
+
+                <!-- Código Promocional -->
+                <input type="text" name="codigo_promocional" placeholder="Código Promocional" class="form-control">
+
+                <!-- Botón de Enviar -->
+                <button type="submit" class="btn btn-primary">Reservar</button>
             </form>
         </div>
     </section>
+
 
     <hr class="my-5">
 
