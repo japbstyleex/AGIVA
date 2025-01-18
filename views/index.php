@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/logo.ico" type="image/x-icon">
 </head>
 
 <body>
