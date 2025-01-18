@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Gastronómico</title>
+    <title>ÁGIVA</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">ÁGIVA</a>
+                <a class="navbar-brand" href="index.php"><img src="../assets/img/logo.ico" alt="ÁGIVA" height="30"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -49,19 +49,64 @@
         </div>
     </section>
 
-    <!-- Sección de presentación -->
-    <section class="container my-5">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="../assets/img/terraza.jpeg" class="img-fluid rounded" alt="Terraza del hotel">
-            </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center">
-                <h2 class="mb-3">Una experiencia inolvidable</h2>
-                <p>Disfruta de un ambiente único, con platos preparados por chefs galardonados y un servicio de primera clase. Nuestro hotel combina confort y gastronomía en un entorno incomparable.</p>
-                <a href="menu.php" class="btn btn-secondary">Descubre nuestro menú</a>
+    <!-- Sección de Slider con Tarjetas -->
+    <section class="slider py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Descubre nuestras experiencias</h2>
+            <div id="cardSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../assets/img/terraza.jpeg" class="card-img-top" alt="Habitación Deluxe">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Habitación Deluxe</h5>
+                                        <p class="card-text">Confort y elegancia con vistas espectaculares.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../assets/img/card2.jpg" class="card-img-top" alt="Gastronomía">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gastronomía</h5>
+                                        <p class="card-text">Sabores auténticos en cada plato.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="../assets/img/card3.jpg" class="card-img-top" alt="Spa y Bienestar">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Spa y Bienestar</h5>
+                                        <p class="card-text">Relajación total en un entorno de lujo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
