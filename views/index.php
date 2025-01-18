@@ -41,7 +41,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero bg-dark text-white text-center d-flex align-items-center justify-content-center" style="background-image: url('../assets/img/hero.jpg'); height: 100vh; background-size: cover; background-position: center;">
+    <section class="hero bg-dark text-white text-center d-flex align-items-center justify-content-center" style="height: 100vh;">
         <div>
             <h1 class="display-4">Bienvenidos al Hotel Gastronómico</h1>
             <p class="lead">Donde la elegancia y la cocina excepcional se encuentran.</p>
