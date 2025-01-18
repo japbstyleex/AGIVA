@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+
+# Composer
+vendor/
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Archivos sensibles
+*.env
+*.log
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+
+# Otros
+*.sql
