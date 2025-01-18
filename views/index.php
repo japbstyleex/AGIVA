@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Hotel Gastronómico</a>
+                <a class="navbar-brand" href="#">ÁGIVA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,7 +43,7 @@
     <!-- Hero Section -->
     <section class="hero bg-dark text-white text-center d-flex align-items-center justify-content-center" style="height: 100vh;">
         <div>
-            <h1 class="display-4">Bienvenidos al Hotel Gastronómico</h1>
+            <h1 class="display-4">Bienvenidos a ÁGIVA gastrohotel Sevilla</h1>
             <p class="lead">Donde la elegancia y la cocina excepcional se encuentran.</p>
             <a href="reservations.php" class="btn btn-primary btn-lg mt-3">Reserva ahora</a>
         </div>
@@ -65,7 +65,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2025 Hotel Gastronómico. Todos los derechos reservados.</p>
+        <p>&copy; 2025 ÁGIVA. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Bootstrap JS -->
